@@ -2,6 +2,7 @@ const notes = require("./notes.js");
 const chalk = require("chalk");
 const yargs = require("yargs");
 
+//node app.js add --title="List" --body="Sweater,Toys"
 yargs.command({
   command: "add",
   describe: "Add a new Note",
@@ -25,6 +26,7 @@ yargs.command({
   },
 });
 
+//node app.js remove --title="M"
 yargs.command({
   command: "remove",
   describe: "Removing exisiting note",
@@ -40,6 +42,7 @@ yargs.command({
   },
 });
 
+//node app.js list
 yargs.command({
   command: "list",
   describe: "Listing all Notes",
@@ -48,7 +51,7 @@ yargs.command({
     notes.listNotes();
   },
 });
-
+//node app.js read --title="List"
 yargs.command({
   command: "read",
   describe: "Read Note",
